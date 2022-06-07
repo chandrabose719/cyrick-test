@@ -90,10 +90,6 @@ hr{
   font-weight: 600;
   letter-spacing: 15px;
 }
-#landing .sub-header{
-  font-family: cursive;
-  letter-spacing: normal;
-}
 
 /* solution */
 #solution .soln-lft{
@@ -142,7 +138,6 @@ hr{
 }
 #about .about-rt p{
   font-size: 18px;
-  font-weight: 600;
   text-align: justify;
 }
 
@@ -189,6 +184,9 @@ hr{
 }
 
 @media (max-width: 576px) {
+  .header{
+    letter-spacing: normal;
+  }
   /* footer */
   #footer{
     text-align: center;
@@ -198,12 +196,7 @@ hr{
     width: 70%;
   }
   #landing .logo-header{
-    color: #6B7171;
-    font-weight: 600;
     letter-spacing: 7px;
-  }
-  #landing .sub-header{
-    letter-spacing: normal;
   }
   /* solution */
   #solution .soln-lft .prism-in img{
@@ -212,6 +205,9 @@ hr{
   }
   #solution .soln-rt p{
     font-size: 15px;
+  }
+  #solution .carousel-header{
+    letter-spacing: 6px;
   }
   #solution .carousel-img{
     width: 100%;
@@ -228,14 +224,36 @@ hr{
   #vision p{
     font-size: 15px;
   }
+  /* workflow */
+  #workflow h3{
+    text-align: center !important;
+  }
+  #workflow .workflow-body img,
+  #workflow .workflow-media img{
+    width: 120px;
+    height: 100px;
+  }
+  #workflow p{
+    font-size: 15px;
+  }
 }
 @media (max-width: 500px) {
   /* solution */
   #solution .soln-lft .prism-in img{
     margin-top: 100px;
   }
+  #workflow .workflow-media img{
+    margin-top: 50px;
+  }
 }
 @media (max-width: 400px) {
+  /* landing */
+  #landing .logo-image{
+    width: 50%;
+  }
+  #landing .logo-header{
+    font-size: 20px;
+  }
   /* solution */
   #solution .soln-lft .prism-in img{
     width: 80px;
@@ -243,14 +261,16 @@ hr{
   }
   /* workflow */
   #workflow .workflow-media img{
-    width: 130px;
-    height: 100px;
+    margin-top: 85px;
   }
 }
 @media (max-width: 300px) {
   /* solution */
   #solution .soln-lft .prism-in img{
     margin-top: 60px;
+  }
+  #workflow .workflow-media img{
+    margin-top: 100px;
   }
 }
 
