@@ -4,7 +4,7 @@ $(document).ready(function(){
   new WOW().init();
 
   // preload
-  var preloader = document.getElementById("preloader");
+  var preloader = document.getElementById("preloader-section");
   if (preloader) {
     window.addEventListener("load", function(){
       preloader.style.display = "none";
