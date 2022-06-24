@@ -31,6 +31,40 @@ $(document).ready(function(){
     }
   });
 
+  // images lightbox popup
+  var $gallery = new SimpleLightbox('.soln-gallery a', {});
+  var $gallery = new SimpleLightbox('.testi-gallery a', {});
+
+  // testimonials carousel
+  $(".testimonial-carousell").owlCarousel({
+    autoplay: true,
+    smartSpeed: 1000,
+    items: 1,
+    dots: true,
+    loop: true,
+  });
+  $(".testimonial-carousel").owlCarousel({
+    autoplay: true,
+    smartSpeed: 1000,
+    center: true,
+    dots: false,
+    loop: true,
+    nav : true,
+    navText : [
+      '<i class="fa fa-arrow-left"></i>',
+      '<i class="fa fa-arrow-right"></i>'
+      
+    ],
+    responsive: {
+      0:{
+          items:1
+      },
+      768:{
+          items:2
+      }
+    }
+  });
+
   // scroll to top  
   const scrollTop = document.querySelector('.scroll-top');
   if (scrollTop) {

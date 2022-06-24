@@ -13,13 +13,12 @@
     <link href="assets/library/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/library/animate/animate.min.css" rel="stylesheet">
     <link href="assets/library/fa/css/all.min.css" rel="stylesheet">
-    
+    <link href="assets/library/lightbox/dist/simple-lightbox.min.css" rel="stylesheet">
+    <link href="assets/library/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <!-- custom css -->
     <link href="assets/library/custom/css/main.css" rel="stylesheet">
   </head>
   <body>
-    <!-- preloader -->
-    <!-- <div id="preloader"></div> -->
     <!-- header -->
     <nav id="header" class="navbar navbar-expand-md navbar-light shadow-sm fixed-top navbar-custom">
       <div class="container-fluid mx-3">
@@ -33,157 +32,116 @@
         <div class="collapse navbar-collapse" id="navbarScroll">
           <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
             <li class="nav-item px-2">
-              <a class="nav-link text-white" href="">ABOUT US</a>
+              <a class="nav-link text-white" href="index.html">HOME</a>
             </li>
             <li class="nav-item px-2">
               <a class="nav-link text-white" href="contact.html">CONTACT</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link text-white" href="our-team.html">OUR TEAM</a>
             </li>
           </ul>  
         </div>
       </div>
     </nav>
     <!-- about-us -->
-    <div id="about-us">
-      <h3 class="text-center mt-5 mb-5 header animated wow zoomIn" data-wow-delay="1s">ABOUT US</h3>
-      <div class="container-fluid py-5">
-        
-        <style>
-          .lead-box{
-            display: grid;
-          }
-          .lead-box-grid img{
-            width: 70%;
-            margin-top: 31px;
-          }
-          .lead-box-content{
-            background-color: #02C4C3;
-          }
-          .lead-box-grid:first-of-type{
-            grid-row: 1 / span 1;
-            grid-column: 2 / span 11;
-            text-align: justify;
-          }
-          .lead-box-grid:last-of-type{
-            grid-row: 1 / span 1;
-            grid-column: 2 / span 3;
-            text-align: center;  
-          }
-        </style>
-
-        <div class="lead-box">
-          <div class="lead-box-grid">
-            <div class="row">  
-              <div class="col-xs-12 col-sm-10 offset-sm-1 col-md-10 offset-md-1 col-lg-10 offset-lg-1 col-xl-10 offset-xl-1 col-xxl-10 offset-xxl-1">
-                <div class="lead-box-content py-5">
-                  <div class="row">
-                    <div class="col-md-4 offset-md-2 col-lg-4 offset-lg-2 col-xl-4 offset-xl-2 col-xxl-4 offset-xxl-2">
-                      <h4 class="text-center header">AISWARYA.B</h4>
-                      <h5 class="text-center fw-bold">Co-Founder, Chief Architect</h5>
-                      <p class="py-3">
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. 
-                        Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. 
-                        Fusce condimentum nunc ac nisi vulputate fringilla. 
-                        Donec lacinia congue felis in faucibus.
-                      </p>                 
-                    </div>
-                    <div class="col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                      <h4 class="text-center header">KAVIN.M</h4>
-                      <h5 class="text-center fw-bold">Co-Founder, Principal Architect</h5>
-                      <p class="py-3">
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante 
-                        sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. 
-                        Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                      </p>                 
-                    </div>
-                  </div>
-                </div>  
-              </div>
-            </div>  
-          </div>
-          <div class="lead-box-grid">
-            <img class="img-fluid" src="assets/images/team/lead-1.png" alt="">
-          </div>
-        </div>  
-        <!-- <div id="teamlead">
-          <div class="container-fluid mt-5 mb-5">
-            <h3 class="text-start ms-3 mt-4 header animated wow zoomIn" data-wow-delay="1s">BOARD MEMBERS</h3>
-            <div class="row">
-              <div class="col-xs-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2 col-xxl-8 offset-xxl-2">
-                <div class="py-4 teamlead-content">
-                  <div class="row">
-                    <div class="col-xs-12 col-sm-10 offset-sm-1 col-md-4 offset-md-2 col-lg-4 offset-lg-2 col-xl-4 offset-xl-2 col-xxl-4 offset-xxl-2">
-                      <p class="text-justify">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>                 
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                      <p class="text-justify">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>                 
-                    </div>
-                  </div>               
-                </div>  
-              </div>
-              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                <div class="teamlead-image">
-                  <img class="img-fluid" src="assets/images/team/lead-1.png" alt="">
-                </div>  
-              </div>
-              <div class="col-xs-12 col-sm-12 col-md-4 offset-md-4 col-lg-4 offset-md-4 col-lg-4 offset-xl-4 col-xxl-4 offset-xxl-4">
-                <div class="teamlead-image">
-                  <img class="img-fluid" src="assets/images/team/lead-2.png" alt="">
-                </div>  
-              </div>
+    <section id="about-us">
+      <div class="container-fluid mt-5 mb-5">
+        <h3 class="text-end me-3 header text-primary animated wow zoomIn" data-wow-delay="1s">ABOUT US</h3>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <div class="about-lft">
+              <h4 class="text-center mt-5 header text-primary animated wow fadeInRight" data-wow-delay="1s">
+                "Lets create the future of the future"
+              </h4>
             </div>    
           </div>
-        </div> -->
-        
-        <!-- <div class="contact-form">
-          <form method="post">
-            <h3 class="text-center mb-4 header animated wow zoomIn" data-wow-delay="1s">ENQUIRY</h3>
-            <div class="row">
-              <div class="col-xs-12 col-sm-12 col-md-8 offset-md-2 col-lg-4 offset-lg-2 col-xl-4 offset-xl-2 col-xxl-4 offset-xxl-2">
-                <div class="mb-3">
-                  <label class="form-label">Name</label>
-                  <input type="text" class="form-control" name="client_name" id="client_name">
-                </div>
-              </div>
-              <div class="col-xs-12 col-sm-12 col-md-8 offset-md-2 col-lg-4 offset-lg-0 col-xl-4 offset-xl-0 col-xxl-4 offset-xxl-0">
-                <div class="mb-3">
-                  <label class="form-label">Email ID</label>
-                  <input type="text" class="form-control" name="client_email" id="client_email">
-                </div>
-              </div>
-              <div class="col-xs-12 col-sm-12 col-md-8 offset-md-2 col-lg-4 offset-lg-2 col-xl-4 offset-xl-2 col-xxl-4 offset-xxl-2">
-                <div class="mb-3">
-                  <label class="form-label">Phone Number</label>
-                  <input type="text" class="form-control" name="client_phone" id="client_phone">
-                </div>
-              </div>
-              <div class="col-xs-12 col-sm-12 col-md-8 offset-md-2 col-lg-4 offset-lg-0 col-xl-4 offset-xl-0 col-xxl-4 offset-xxl-0">
-                <div class="mb-3">
-                  <label class="form-label">Gategory</label>
-                  <select class="form-select" name="client_category">
-                    <option value="Architecture" selected>Architecture</option>
-                    <option value="Landscape">Landscape</option>
-                    <option value="Interior">Interior</option>
-                    <option value="Civil">Civil</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-xs-12 col-sm-12 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2 col-xxl-8 offset-xxl-2">
-                <div class="mb-3">
-                  <label class="form-label">Message</label>
-                  <textarea class="form-control" name="client_message" id="client_message" rows="6"></textarea>
-                </div>
-              </div>
-              <div class="col-xs-12 col-sm-12 col-md-4 offset-md-4 col-lg-4 offset-lg-4 col-xl-4 offset-xl-4 col-xxl-4 offset-xxl-4">
-                <div class="mt-3 mb-3">
-                  <button type="submit" class="btn btn-primary form-control" name="send_email" onclick="sendEmail()">Send to Cyrick</button>
-                </div>
-              </div>  
-            </div>  
-          </form>
-        </div> -->
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <div class="about-rt">
+              <p class="mt-3 mb-2 animated wow fadeInLeft" data-wow-delay="1s">
+                We welcome you to the realm of CY-RICK . . .
+              </p>
+              <p class="mt-3 mb-2 animated wow fadeInLeft" data-wow-delay="1s">
+                “The Cy-RICK Creation, was born in the year 2020 “We are specialized creating extraordinary buildings, 
+                and is known for delivering outstanding design that blends seamlessly into its surroundings. 
+                We also believe in building long-lasting relationships with our clients to ensure that all needs are met throughout the process.
+              </p>
+              <p class="mt-3 mb-2 d-none d-sm-block animated wow fadeInLeft" data-wow-delay="1s">
+                Fuelled by unbound creativity and cutting-edge technology, our Architectural, Civil and Interior Design Services are 
+                spearheaded to exceed the expectations of all those in need of an innovation, reliability and 
+                experience of a lifetime. Time and again, we have proved our mettle as the finest team of architects 
+                in Coimbatore, by displaying an outstanding track-record of design-excellence, coupled with service efficiency, 
+                responsiveness and a strong commitment towards project deadlines as well as budgetary constraints. 
+              </p>
+              <p class="mt-3 mb-2 animated wow fadeInLeft" data-wow-delay="1s">
+                Our team takes over everything, from an idea and concept development to realization. 
+                We believe in traditions and incorporate them within our innovations. 
+                All our projects incorporate a unique artistic image and functional solutions. 
+                Client is the soul of the project. Our main goal is to illustrate his/hers values and individuality through design.
+              </p>
+            </div>    
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-8 offset-md-4 col-lg-7 offset-lg-5 col-xl-7 offset-xl-5 col-xxl-7 offset-xxl-5">
+            <div class="about-rt">
+              <h4 class="text-left my-4 header text-primary animated wow zoomIn" data-wow-delay="1s">
+                “We	believe in optimizing limited resources to design buildings and Interiors that are functional.”
+              </h4>
+            </div>    
+          </div>
+        </div>
       </div>
-    </div>    
-    <div id="footer">
+    </section>
+    <!-- vision -->
+    <section id="vision">
+      <div class="container my-5 py-5">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+            <h3 class="text-start mt-3 header animated wow zoomIn" data-wow-delay="1s">OUR VISION</h3>
+            <p class="mt-3 mb-2 animated wow zoomIn" data-wow-delay="2s">
+              Share us your objectives, your vision, schedule and budget and that we can assess the 
+              feasibleness of your project and get back to you with the foremost economical, 
+              efficient design and construction solutions available. Be a client-focused, technology 
+              driven business organization; providing diversified value-added consultancy services of 
+              the highest quality and adhering to ethical practices.
+            </p>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+            <h3 class="text-start mt-3 header animated wow zoomIn" data-wow-delay="1s">OUR MISSION</h3>
+            <p class="mt-3 mb-2 animated wow zoomIn" data-wow-delay="2s">
+              To excel globally in the fields of Architecture and Civil Engineering by providing 
+              world-class and unparalleled services of Designs and Project Management of Built 
+              Environment (Buildings, Industries & Infrastructural Projects). 
+            </p>
+            <p class="mt-3 mb-2 animated wow zoomIn" data-wow-delay="2s">
+              To create an aware society and to make masses realize the importance of recycling waste 
+              materials including water. And to create net zero energy world for future. 
+              CY-RICK CREATION promotes an ecologically balanced globe.
+            </p>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 d-none d-sm-block">
+            <h3 class="text-start mt-3 header animated wow zoomIn" data-wow-delay="1s">OUR PROMISE</h3>
+            <p class="mt-3 mb-2 animated wow zoomIn" data-wow-delay="2s">
+              Our promise is client satisfaction, fulfilling all their constructional needs blend with 
+              modern technology available and our innovative design and ideas to suit local, social and 
+              ecological conditions cost effectively and will no compromise in quality aspect.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-8 offset-md-4 col-lg-7 offset-lg-5 col-xl-7 offset-xl-5 col-xxl-7 offset-xxl-5">
+            <h4 class="quote text-start header text-white animated wow zoomIn" data-wow-delay="2s">
+              “As an architect you design for the present with a awareness of 
+              the past for the future which is essentially UNKNOWN”. 
+            </h4>
+            <h4 class="auther text-end header text-white animated wow zoomIn" data-wow-delay="2s">
+              - Norman Foster.
+            </h4>
+          </div>
+        </div>    
+      </div>
+    </section>
+    <!-- footer -->
+    <section id="footer">
       <div class="container pt-5 pb-2">
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
@@ -209,7 +167,26 @@
             <h4 class="text-light mb-4">Quick Links</h4>
             <p class="mb-2">
               <i class="fa-solid fa-chevron-right"></i>
-              <a class="btn btn-link text-decoration-none text-white" href="index.html">Home</a>
+              <a class="btn btn-link text-decoration-none text-white scrollto" href="index.html#landing">Home</a>
+            </p>
+            <p class="mb-2">
+              <i class="fa-solid fa-chevron-right"></i>
+              <a class="btn btn-link text-decoration-none text-white scrollto" href="about-us.html">About Us</a>
+            </p>
+            <p class="mb-2">
+              <i class="fa-solid fa-chevron-right"></i>
+              <a class="btn btn-link text-decoration-none text-white scrollto" href="about-us.html#vision">Vision & Mission</a>
+            </p>
+            <p class="mb-2">
+              <i class="fa-solid fa-chevron-right"></i>
+              <a class="btn btn-link text-decoration-none text-white scrollto" href="index.html#workflow">Our Workflow</a>
+            </p>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+            <h4 class="text-light mb-4">Popular Links</h4>
+            <p class="mb-2">
+              <i class="fa-solid fa-chevron-right"></i>
+              <a class="btn btn-link text-decoration-none text-white" href="about-us.html">About Us</a>
             </p>
             <p class="mb-2">
               <i class="fa-solid fa-chevron-right"></i>
@@ -217,30 +194,11 @@
             </p>
             <p class="mb-2">
               <i class="fa-solid fa-chevron-right"></i>
-              <a class="btn btn-link text-decoration-none text-white" href="">Terms & Condition</a>
+              <a class="btn btn-link text-decoration-none text-white" href="our-team.html">Our Team</a>
             </p>
             <p class="mb-2">
               <i class="fa-solid fa-chevron-right"></i>
-              <a class="btn btn-link text-decoration-none text-white" href="">Our Services</a>
-            </p>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
-            <h4 class="text-light mb-4">Popular Links</h4>
-            <p class="mb-2">
-              <i class="fa-solid fa-chevron-right"></i>
-              <a class="btn btn-link text-decoration-none text-white" href="">About Us</a>
-            </p>
-            <p class="mb-2">
-              <i class="fa-solid fa-chevron-right"></i>
-              <a class="btn btn-link text-decoration-none text-white" href="">Contact Us</a>
-            </p>
-            <p class="mb-2">
-              <i class="fa-solid fa-chevron-right"></i>
-              <a class="btn btn-link text-decoration-none text-white" href="">Terms & Condition</a>
-            </p>
-            <p class="mb-2">
-              <i class="fa-solid fa-chevron-right"></i>
-              <a class="btn btn-link text-decoration-none text-white" href="">Our Services</a>
+              <a class="btn btn-link text-decoration-none text-white" href="">Link Name</a>
             </p>
           </div>
           <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
@@ -270,14 +228,14 @@
           </div>
         </div>    
       </div>
-    </div>
+    </section>
     <!-- library js -->
     <script src="assets/library/jquery/jquery.min.js"></script>
     <script src="assets/library/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/library/fa/js/all.min.js"></script>
     <script src="assets/library/wow/wow.min.js"></script>
-    <!-- sending email -->
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="assets/library/lightbox/dist/simple-lightbox.min.js"></script>
+    <script src="assets/library/owlcarousel/owl.carousel.min.js"></script>
     <!-- custom js -->
     <script src="assets/library/custom/js/main.js"></script>
   </body>
