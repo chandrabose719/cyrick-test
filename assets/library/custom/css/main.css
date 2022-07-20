@@ -113,6 +113,10 @@ a, a:hover, a:focus{
 #preloader .loader:last-child .dot{
   animation-delay: calc(-0.1s * var(--i));
 }
+.toast-container{
+  z-index: 1;
+  bottom: 30px;
+}
 hr{
   opacity: 1;
 }

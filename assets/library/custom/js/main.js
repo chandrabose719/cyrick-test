@@ -80,18 +80,171 @@ $(document).ready(function(){
   }
 
 });
-function sendEmail() {
-  Email.send({
-    Host: "smtp.elasticemail.com",
-    Username: "chandrabose719.videos@gmail.com",
-    Password: "9DA54DC90FFB2018B1F51AB896E6345C61D8",
-    To: 'chandrabose719@gmail.com',
-    From: "chandrabose719.videos@gmail.com",
-    Subject: "Sending Email using javascript",
-    Body: "Well that was easy!!",
-  })
-  .then(function (message) {
-    console.log("email message: ", message);
-  });
+
+$(".close-toast").click(function(){
+  $("#toaster").toast("hide");
+});
+
+function showErrMsg(id, msg){
+  $(id).html(msg);
+};
+
+function resetMsg(value){
+	$(value).next().html('');
 }
 
+function btnLoader(status){
+  if(status){
+    $(".client-enquiry").attr("disabled", true);
+    $(".client-enquiry span").removeClass("visually-hidden");
+  }else{
+    $(".client-enquiry").removeAttr("disabled");
+    $(".client-enquiry span").addClass("visually-hidden");
+  }  
+}
+
+function showToast(type, msg){
+  $(".toast-head").html(type);
+  $(".toast-msg").html(msg);
+  $("#toaster").toast("show");
+};
+
+function resetClientEnquiry(){
+  $('#client_name').val("");
+  $('#client_email').val("");
+  $('#client_phone').val("");
+  $("#client_category").val("Architecture");
+  $('#client_message').val("");  
+};
+
+function contactValidation(obj){
+  var validation = false;
+  if(obj.name == ''){
+    var id = '#client_name_span';
+    var msg = 'Client name should not empty!';
+    showErrMsg(id, msg);
+    var validation = true;
+  }
+  if(obj.name != '' && obj.name.length <= 2){
+    var id = '#client_name_span';
+    var msg = 'Client name should be more than 2 characters!';
+    showErrMsg(id, msg);
+    var validation = true;
+  }
+  if(
+    obj.email == '' || 
+    obj.email.indexOf("@", 0) < 0 || 
+    obj.email.indexOf(".", 0) < 0
+  ){
+    var id = '#client_email_span';
+    var msg = 'Please enter a valid Client Email!';
+    showErrMsg(id, msg);
+    var validation = true;
+  }
+  if(obj.phone == '' || obj.phone.length != 10){
+    var id = '#client_phone_span';
+    var msg = 'Please enter a valid Phone number!';
+    showErrMsg(id, msg);
+    var validation = true;
+  }
+  if(obj.message == ''){
+    var id = '#client_message_span';
+    var msg = 'Please enter your message!';
+    showErrMsg(id, msg);
+    var validation = true;
+  }
+  return validation;
+};
+
+function createTable(obj){
+  var table = `
+    <table style='width:100%;border: 1px solid black;border-radius: 10px;'>
+      <tr>
+        <th style='border: 1px solid black;border-radius: 10px; padding: 5px 8px;'>Name</th>
+        <th style='border: 1px solid black;border-radius: 10px; padding: 5px 8px;'>Email</th>
+        <th style='border: 1px solid black;border-radius: 10px; padding: 5px 8px;'>Phone number</th>
+        <th style='border: 1px solid black;border-radius: 10px; padding: 5px 8px;'>Category</th>
+      </tr>
+      <tr>
+        <td style='border: 1px solid black;border-radius: 10px; padding: 5px 8px;text-align:center;'>
+        `+ obj.name +`
+        </td>
+        <td style='border: 1px solid black;border-radius: 10px; padding: 5px 8px;text-align:center;'>
+        `+ obj.email +`
+        </td>
+        <td style='border: 1px solid black;border-radius: 10px; padding: 5px 8px;text-align:center;'>
+        `+ obj.phone +`
+        </td>
+        <td style='border: 1px solid black;border-radius: 10px; padding: 5px 8px;text-align:center;'>
+        `+ obj.category +`
+        </td>
+      </tr>
+      <tr>
+        <th style='border: 1px solid black;border-radius: 10px; padding: 5px 8px;'>Message</th>
+        <td colspan="3" style='border: 1px solid black;border-radius: 10px; padding: 5px 8px;'>
+        `+ obj.message +`
+        </th>
+      </tr>
+    </table>
+  `;
+  return table;
+};
+
+async function clientEnquiry(){
+  var name = $('#client_name').val();
+  var email = $('#client_email').val();
+  var phone = $('#client_phone').val();
+  var category = $("#client_category").val();
+  var message = $('#client_message').val();
+  var obj = {
+    name: name,
+    email: email, 
+    phone: phone,
+    category: category,
+    message: message
+  };
+  // validation
+  var validation = contactValidation(obj);
+
+  if(validation == false){
+    btnLoader(true);
+    var body = createTable(obj);
+    await elasticEmail(obj, body, function(err, res){
+      if(res == "OK"){
+        showToast("Success", "Your details forwarded to our admin!");
+        resetClientEnquiry();
+      }else{
+        console.log("res err: ", err);
+        showToast("Error", "Not able to send your details!");
+      }
+    });
+    btnLoader(false);
+  }  
+};
+
+async function elasticEmail(obj, body, cb) {
+  let host = "smtp.elasticemail.com";
+  let uname = "cyrickcreation@gmail.com";
+  let pass = "4BF6E510CBE3B05A5C3C7E8A34BA744C8A17";
+  
+  let toEmail = uname;
+  let subject = "Cyrick Enquiry!";
+  
+  await Email.send({
+    Host: host,
+    Username: uname,
+    Password: pass,
+    To: toEmail,
+    Subject: subject,
+    From: uname,
+    Body: body,
+  })
+  .then(function(message){
+    console.log("email success res: ", message);
+    return cb(null, message);
+  })
+  .catch(function(err){
+    console.log("email err: ", err);
+    return cb(err);
+  });
+};
